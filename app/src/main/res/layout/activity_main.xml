@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.cybersoft.printerDemo.ui.viewModel.MainViewModel"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_border"
+            android:hint="請輸入列印幾聯"
+            android:inputType="number"
+            android:text="@={viewModel.printNum}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:padding="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="開始列印"
+            android:layout_gravity="center"
+            android:onClick="@{() -> viewModel.onClickStartPrint()}"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+</layout>
