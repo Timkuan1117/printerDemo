@@ -1,18 +1,11 @@
 package com.cybersoft.printerDemo.hardware.hardwarePrinter;
 
 import static com.cybersoft.printerDemo.hardware.hardwarePrinter.PrinterConstant.PAGE_WIDTH;
-
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Bitmap;
-import android.nfc.Tag;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.util.Log;
-
-import com.cybersoft.printerDemo.App;
 import com.cybersoft.printerDemo.hardware.HardwareManager;
 import com.cybersoft.printerDemo.hardware.hardwareInterface.cPrinter;
 import com.pax.gl.page.IPage;
@@ -261,13 +254,13 @@ public class PrinterManager {
     public interface OnPrinterListener
     {
         // 列印失敗，通知執行端 修改ＵＩ
-        public void onPrintErr (int forceRetry , Handler handler , PrinterConstant.PrintResultCode printResult);
+         void onPrintErr (int forceRetry , Handler handler , PrinterConstant.PrintResultCode printResult);
         // 列印成功，通知執行端
-        public void onPrintSuc ();
+         void onPrintSuc ();
         // 列印失敗，跳出Dialog通知使用者，使用者選擇項目
-        public void onPrintCancel (int requestCode);
+         void onPrintCancel (int requestCode);
         // 列印失敗，跳出Dialog通知使用者，使用者選擇項目
-        public void onPrintConfrim (int requestCode);
+         void onPrintConfrim (int requestCode);
 
     }
 

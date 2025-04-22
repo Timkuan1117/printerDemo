@@ -1,12 +1,8 @@
 package com.cybersoft.printerDemo.hardware.hardware_castle;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-
 import com.cybersoft.printerDemo.hardware.hardwareInterface.cHelper;
 import com.cybersoft.printerDemo.hardware.hardwareInterface.cPrinter;
-
-import CTOS.CtPrint;
 
 public class CastleHelper implements cHelper {
 

@@ -3,8 +3,6 @@ package com.cybersoft.printerDemo.hardware.hardware_pax;
 import android.content.Context;
 import com.cybersoft.printerDemo.hardware.hardwareInterface.cHelper;
 import com.cybersoft.printerDemo.hardware.hardwareInterface.cPrinter;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import com.pax.dal.IDAL;
 import com.pax.neptunelite.api.NeptuneLiteUser;
 public class PaxHelper implements cHelper {
@@ -17,12 +15,12 @@ public class PaxHelper implements cHelper {
 
     @Override
     public void init() {
-        this.context = context;
         this.retry = 0;
     }
 
     @Override
     public void bindService(Context context) throws Exception {
+        this.context = context;
         mDal = NeptuneLiteUser.getInstance().getDal(context);
     }
 
